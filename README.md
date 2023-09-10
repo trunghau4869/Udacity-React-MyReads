@@ -33,6 +33,10 @@ udacity-myreads/
 
 In the project directory, you can run:
 
+### `npm install`
+
+Runs npm install command  in the project root directory to install dependencies is missing.<br>
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
