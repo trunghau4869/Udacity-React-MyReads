@@ -15,16 +15,12 @@ const Book = ({ book, updateBook, myKey }) => {
   };
 
   const shelves = [
-    {
-      id: "1",
-      shelfName: "currentReading",
-      shelfDisplayName: "Currently Reading",
-    },
+    { id: "1",shelfName: "currentReading",shelfDisplayName: "Currently Reading" },
     { id: "2", shelfName: "wantToRead", shelfDisplayName: "Want to Read" },
     { id: "3", shelfName: "read", shelfDisplayName: "Read" },
     { id: "4", shelfName: "none", shelfDisplayName: "None" },
   ];
-  const [shelve, setShelve] = useState(shelves);
+  
   return (
     <li>
       <div className="book">
@@ -39,7 +35,7 @@ const Book = ({ book, updateBook, myKey }) => {
           ></div>
           <div className="book-shelf-changer">
             <select
-              value={shelve.shelfName}
+              value={book.shelf}
               onChange={(e) => updateBook(book, e.target.value)}
             >
               {shelves.map((option, index) => (
